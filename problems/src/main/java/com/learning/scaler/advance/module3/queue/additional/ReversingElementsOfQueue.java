@@ -1,7 +1,11 @@
 package com.learning.scaler.advance.module3.queue.additional;
 
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /*
 Problem Description
@@ -41,6 +45,10 @@ Example
 * */
 public class ReversingElementsOfQueue {
 
+    public static void main(String[] args) {
+
+    }
+
     public ArrayList<Integer> solve(ArrayList<Integer> A, int B) {
         Queue<Integer> queue = new LinkedList<>(A);
         ArrayList<Integer> result = new ArrayList<>();
@@ -55,7 +63,7 @@ public class ReversingElementsOfQueue {
 
     public int[] solve(int[] A, int B) {
         Deque<Integer> q = new ArrayDeque<>(A.length);
-        int i = 0;
+        int i;
         // Insert first B elements in queue
         for (i = 0; i < B; i++)
             q.addLast(A[i]);
